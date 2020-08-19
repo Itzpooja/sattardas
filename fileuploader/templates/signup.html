@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sattardas</title>
+  <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/yeti/bootstrap.min.css"> 
+  <style>
+       .bg-image{
+        height: 730px;
+        width: 100%;
+        background-image: url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80");
+        background-size: contain;
+        background-size: cover;
+        filter: blur(4px);
+        -webkit-filter: blur(4px);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+       }
+       .bg-text{
+        background-color: rgb(0,0,0); /* Fallback color */
+          background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+          color: white;
+          font-weight: bold;
+          border: 3px solid #f1f1f1;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 2;
+          width: 80%;
+          padding: 20px;
+          text-align: center;
+       }
+       section{
+        height: 730px;
+       }
+  </style>
+</head>
+<body style="border: 1px solid black;margin: 0px;padding: 0px;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+  <a class="navbar-brand" href="#" style="font-weight: bold;font-size: 30px;">Sattardas</a>
+  
+</div>
+</nav>
+    <section>
+        
+        <div class="bg-image"></div>
+        <div class="bg-text">
+          <h1>Welcome to Sattardas</h1>
+          <div class="container" style="width: 350px;height: 475px;border-radius: 3%;">
+            
+            <div style="align-items: center;justify-content: center; color: white">
+                <h3 style="margin-top: 3em;padding: 5px">Login to your account</h3><br>
+                <form class="form" action="/signup/" method="POST">
+                    {% csrf_token %}
+                    
+                    <div class="form-group">
+            <label>Full Name</label>
+              <input type="text" name="full_name" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Username</label>
+              <input type="username" name="username" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" name="password" class="form-control">
+            </div>
+            <div class="form-group">
+              <input type="submit" class="btn btn-md btn-success" value="Signup">
+            </div>
+            <div style="margin: 10px 0;text-align: center;font-size: 16px;color: white;">
+              Already have an account?<a style="color: black; text-decoration: none;padding-left: 5px" href="/">Signin</a>
+            </div>
+                </form>
+            </div>
+    </div>
+        </div>
+    </section>
+    
+  <footer>
+    <div style="background-color:#181818;color: white; height: 220px;">
+        <div class="container" style=" display: flex; justify-content: space-between;">
+        <div style="display:flex;">
+            
+            <h2 style="margin: 10px;font-family: Open Sans;"></h2>
+        </div>
+        <br>
+        
+        <div style="margin-top: 0px;">
+             <ul  style="list-style:none;"> 
+               
+                <hr style="margin-right: 0px;">
+                <ul class="ul-style" style="text-align: left;list-style:none;margin-right: 60px;">
+                <a href="/faq/" style="color: white"><li>FAQ</li></a>
+                <a href="/contact/" style="color: white;"><li>Contact us</li></a>
+                <a href="/signup/" style="color: white;"><li>Create account</li></a>
+                <a href="/feedback/" style="color: white;"><li>Feedback</li></a>
+              </ul>
+                </ul>
+        </div>
+    </div>
+    <p style="text-align: center;">Copyrights &nbsp; <i class="far fa-copyright" aria-hidden="true"></i> 2020 &nbsp; 
+      Sattardas
+    </p>
+    </div>
+</footer>
+
+</body>
+</html>
